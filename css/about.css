@@ -1,0 +1,6 @@
+.about__block {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 100px 0;
+}

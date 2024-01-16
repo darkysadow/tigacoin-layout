@@ -1,0 +1,139 @@
+.about {
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 120px 0 0 0;
+	}
+	&__title {
+		
+	}
+	&__community{
+		position: relative;
+		z-index: 1;
+		&::after{
+			content: "";
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			border-radius: 50px;
+			border: 20px solid rgba(0, 0, 0, 0.2);
+			bottom: -70px;
+			left: 150px;
+		}
+	}
+	&__community,
+	&__willbe{
+		margin-top: 100px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&__community-image {
+		display: flex;
+		flex: 0 0 27%;
+		position: relative;
+		z-index: 5;
+		box-shadow: 0 31px 35px rgb(0 0 0 / 10%);
+		border-radius: 10px;
+		background-color: #32b5a4;
+		justify-content: center;
+		align-items: center;
+		& img {
+			max-width: 50%;
+			flex: 0 0 100%;
+			object-fit: contain;
+		}
+	}
+	&__community-quote {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 50%;
+	}
+	&__community__tagname {
+		font-size: 19px;
+		color: #32b5a4;
+	}
+	&__community-title {
+		font-size: 26px;
+		font-weight: 700;
+		color: #151515;
+		padding-bottom: 16px;
+		padding-top: 8px;
+	}
+	&__community-text {
+		font-size: 17px;
+		color: #fafafa;
+		line-height: 27px;
+		padding-bottom: 30px;
+	}
+	&__scores {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		text-align: center;
+		margin-top: 100px;
+	}
+	&__score {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__score-block {
+		width: 75px;
+		height: 75px;
+		border-radius: 50px;
+		border: 10px solid #32b5a4;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& p {
+			font-size: 18px;
+			font-weight: 500;
+			color: #32b5a4;
+		}
+	}
+	&__score-name {
+		font-size: 18px;
+		margin: 10px 0 0 0;
+		color: #fafafa;
+	}
+	&__willbe {
+		position: relative;
+		z-index: 1;
+		&::after{
+			content: "";
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			border-radius: 50px;
+			border: 20px solid rgba(0, 0, 0, 0.2);
+			bottom: -70px;
+			left: -80px;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			border: 20px solid rgba(0, 0, 0, 0.2);
+			top: 50%;
+			transform: rotate(45deg);
+			left: 300px;
+		}
+	}
+}
+
+@media (max-width: 592px) {
+	.about{
+		&__community,
+		&__willbe{
+			flex-direction: column-reverse;
+			&:after,
+			&:before{
+				display: none;
+			}
+		}
+	}
+}

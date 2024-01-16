@@ -1,0 +1,140 @@
+.overview {
+	&__block {
+		padding: 140px 142.5px 150px 142.5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title {
+		
+	}
+	&__items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 80px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 45%;
+		box-shadow: 0 31px 35px rgb(0 0 0 / 10%);
+		padding: 35px 31px;
+		margin-top: 50px;
+		align-items: center;
+		text-align: center;
+		background-color: #fff;
+		position: relative;
+		z-index: 2;
+		&_1,
+		&_2,
+		&_3,
+		&_4{
+			
+			&:after{
+				z-index: 1;
+				content: "";
+				width: 2px;
+				height: 100px;
+				background-color: rgba(0, 0, 0, 0.3);
+				position: absolute;
+			}
+			&:before{
+				content: "";
+				width: 10px;
+				height: 10px;
+				border-radius: 50px;
+				background-color: #32b5a4;
+				position: absolute;
+				
+			}
+		}
+		&_1{
+			&:after{
+				top: -100px;
+				left: 1px;
+			}
+			&:before{
+				top: -110px;
+				left: -3px;
+			}
+		}
+		&_2{
+			&:after{
+				top: -100px;
+				right: 1px;
+			}
+			&:before{
+				top: -110px;
+				right: -3px;
+			}
+		}
+		&_3{
+			&:after{
+				bottom: -100px;
+				left: 1px;
+			}
+			&:before{
+				bottom: -110px;
+				left: -3px;
+			}
+		}
+		&_4{
+			&:after{
+				bottom: -100px;
+				right: 1px;
+			}
+			&:before{
+				bottom: -110px;
+				right: -3px;
+			}
+		}
+	}
+	&__item-image {
+		& img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	&__item-title {
+		font-size: 24px;
+		font-weight: 700;
+		color: #131313;
+		padding: 20px 0;
+	}
+	&__item-text {
+		font-size: 17px;
+		color: #666;
+		line-height: 26px;
+		& a{
+			color: #ff7657;
+			font-size: 17px;
+			font-weight: 500;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.overview{
+		&__block{
+			padding: 0px;
+		}
+	}
+}
+
+@media (max-width: 704px) {
+	.overview{
+		&__items{
+			flex-direction: column;
+		}
+		&__item{
+			margin: 20px 0 0 0;
+			&:after,
+			&:before{
+				display: none;
+			}
+		}
+	}
+}

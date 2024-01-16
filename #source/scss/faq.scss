@@ -1,0 +1,32 @@
+.faq {
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 120px 0 0 0;
+	}
+	&__title {}
+	&__body {
+		max-width: 730px;
+		width: 100%;
+		margin: 100px 0 0 0;
+	}
+	&__item {}
+	&__item-title {
+		padding: 20px 30px;
+		background-color: #f4f6fa;
+		& p {
+			color: #32b5a4;
+			font-weight: 700;
+
+		}
+	}
+	&__main {
+		display: none;
+		padding: 30px 30px;
+		& p {
+			line-height: 24px;
+			color: #fafafa;
+		}
+	}
+}
